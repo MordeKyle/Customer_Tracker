@@ -21,5 +21,20 @@ namespace Customer_Tracker
         {
             InitializeComponent();
         }
+
+        private void addCustomerButton_Click(object sender, EventArgs e)
+        {
+            addCustomer addCustomer = new addCustomer();
+            addCustomer.Show();
+        }
+
+        private void customerNumberTxt_TextChanged(object sender, EventArgs e)
+        {
+            if (customerNumberTxt.Text.Length == 10)
+            {
+                MessageBox.Show("Success");
+                customerNumberTxt.Text = "";
+            }
+        }
     }
 }

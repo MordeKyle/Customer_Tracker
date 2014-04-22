@@ -21,5 +21,21 @@ namespace Customer_Tracker
         {
             InitializeComponent();
         }
+
+        private void createCustomerButton_Click(object sender, EventArgs e)
+        {
+            string first = firstNameTxt.Text;
+            string last = lastNameTxt.Text;
+            string phone = phoneNumberTxt.Text;
+
+            if (phoneNumberTxt.Text.Length != 10)
+            {
+                MessageBox.Show("Please enter the customer's phone number in the following format:" + "\n" + "3145551234");
+            }
+            else
+            {
+
+            }
+        }
     }
 }

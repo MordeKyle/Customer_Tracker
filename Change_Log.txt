@@ -1,5 +1,13 @@
 ***CHANGE LOG***
 
+Version: 1.1 Optimistic Robin
+04/22/2014 @ 12:37
+•Added 3 Text Boxes 1 button to addCustomer(form)
+	-Added some testable functions
+•Added Button and Text box to Form1
+	-Testable functions
+
+
 Version: 1.0 Optimistic Robin
 04/22/2014 @ 11:56
 •Created Repository and Second Form (addCustomer)
