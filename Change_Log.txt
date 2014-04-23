@@ -1,5 +1,14 @@
 ***CHANGE LOG***
 
+Version: 1.2 Building Robin
+04/23/2014 @ 02:54
+	-addCustomer.cs-
+•aded method to create customer .txt
+•added method to write to customer .txt
+•created Mass_Email_List.txt
+•added method to write customer email to Mass_Email_List.txt
+•added all the field to the form
+
 Version: 1.1 Optimistic Robin
 04/22/2014 @ 12:37
 •Added 3 Text Boxes 1 button to addCustomer(form)
