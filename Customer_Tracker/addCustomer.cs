@@ -53,8 +53,8 @@ namespace Customer_Tracker
                             createFile.Close();
                             StreamWriter outputFile;
                             outputFile = File.AppendText("../../Customers/" + phone + ".txt");
-                            outputFile.WriteLine(first);
-                            outputFile.WriteLine(last);
+                            outputFile.WriteLine(first + " " + last);
+                            //outputFile.WriteLine(last);
                             outputFile.WriteLine(phone);
                             outputFile.WriteLine(email);
                             outputFile.WriteLine(" ");

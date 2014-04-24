@@ -31,6 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.customerNumberTxt = new System.Windows.Forms.TextBox();
             this.addCustomerButton = new System.Windows.Forms.Button();
+            this.addProductButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // customerNumberTxt
@@ -43,7 +44,7 @@
             // 
             // addCustomerButton
             // 
-            this.addCustomerButton.Location = new System.Drawing.Point(190, 120);
+            this.addCustomerButton.Location = new System.Drawing.Point(190, 54);
             this.addCustomerButton.Name = "addCustomerButton";
             this.addCustomerButton.Size = new System.Drawing.Size(82, 23);
             this.addCustomerButton.TabIndex = 1;
@@ -51,11 +52,22 @@
             this.addCustomerButton.UseVisualStyleBackColor = true;
             this.addCustomerButton.Click += new System.EventHandler(this.addCustomerButton_Click);
             // 
+            // addProductButton
+            // 
+            this.addProductButton.Location = new System.Drawing.Point(190, 83);
+            this.addProductButton.Name = "addProductButton";
+            this.addProductButton.Size = new System.Drawing.Size(82, 23);
+            this.addProductButton.TabIndex = 2;
+            this.addProductButton.Text = "Add Product";
+            this.addProductButton.UseVisualStyleBackColor = true;
+            this.addProductButton.Click += new System.EventHandler(this.addProductButton_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(284, 262);
+            this.Controls.Add(this.addProductButton);
             this.Controls.Add(this.addCustomerButton);
             this.Controls.Add(this.customerNumberTxt);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -70,6 +82,7 @@
 
         private System.Windows.Forms.TextBox customerNumberTxt;
         private System.Windows.Forms.Button addCustomerButton;
+        private System.Windows.Forms.Button addProductButton;
     }
 }
 
