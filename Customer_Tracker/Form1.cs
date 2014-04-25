@@ -19,6 +19,8 @@ namespace Customer_Tracker
     public partial class Form1 : Form
     {
         public static string customerNumber = string.Empty;
+        public static string customerName = string.Empty;
+        public static string customerEmail = string.Empty;
 
         public Form1()
         {
@@ -40,8 +42,14 @@ namespace Customer_Tracker
 
                 if (File.Exists(fileLocation)) //check to see if the customer file exists
                 {
+                    string name = File.ReadLines("../../Customers/" + customerNumber + ".txt").Skip(0).Take(1).First();
+                    string email = File.ReadLines("../../Customers/" + customerNumber + ".txt").Skip(2).Take(1).First();
+
+                    customerName = name;
+                    customerEmail = email;
+
                     StreamReader findCustomer = new StreamReader(fileLocation); //create stream reader
-                    string customerName = findCustomer.ReadLine(); //reading first line. (idk)
+                    //string customerName = findCustomer.ReadLine(); //reading first line. (idk)
                     //MessageBox.Show(customerName); //testable
                     customerProfile customerProfile = new customerProfile(); //opening customerProfile form
                     customerProfile.Show();
@@ -58,6 +66,17 @@ namespace Customer_Tracker
         {
             addProduct addProduct = new addProduct();
             addProduct.Show();
+        }
+
+        private void exitButton_Click(object sender, EventArgs e)
+        {
+            addCustomer addCustomer = new addCustomer();
+            customerProfile customerProfile = new customerProfile();
+            addProduct addProduct = new addProduct();
+            addCustomer.Close();
+            customerProfile.Close();
+            addProduct.Close();
+            this.Close();
         }
     }
 }

@@ -1,5 +1,14 @@
 ***CHANGE LOG***
 
+Version: 1.3.1 Building Robin
+04/24/2014 @ 22:09
+	-addCustomer.cs-
+•added if-else statement to check if customer already exists.
+	-customerProfiles.cs-
+•added customer info on form initialize.
+	-Form1.cs-
+•added static variables for customerProfiles.cs customer info.
+
 Version: 1.3 Building Robin
 04/24/2014 @ 12:17
 	-Form1.cs-

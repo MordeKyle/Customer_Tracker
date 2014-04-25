@@ -16,9 +16,14 @@ namespace Customer_Tracker
         public customerProfile()
         {
             InitializeComponent();
+            customerNumberLbl.Text = Form1.customerNumber;
+            customerNameLbl.Text = Form1.customerName;
+            customerEmailLbl.Text = Form1.customerEmail;
         }
+        private void drinkCB_SelectedIndexChanged(object sender, EventArgs e)
+        {
 
-
-
+        }
+        
     }
 }

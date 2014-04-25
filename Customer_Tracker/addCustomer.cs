@@ -49,23 +49,31 @@ namespace Customer_Tracker
                     {
                         if (confirmInput(email, confirmEmail) == true)
                         {
-                            FileStream createFile = File.Create("../../Customers/" + phone + ".txt");
-                            createFile.Close();
-                            StreamWriter outputFile;
-                            outputFile = File.AppendText("../../Customers/" + phone + ".txt");
-                            outputFile.WriteLine(first + " " + last);
-                            //outputFile.WriteLine(last);
-                            outputFile.WriteLine(phone);
-                            outputFile.WriteLine(email);
-                            outputFile.WriteLine(" ");
-                            outputFile.WriteLine("Drinks:");
-                            outputFile.WriteLine("-----------------------");
-                            outputFile.Close();
-                            StreamWriter addEmail;
-                            addEmail = File.AppendText("../../Mass_Email_List.txt");
-                            addEmail.WriteLine(email + ",");
-                            addEmail.Close();
-                            this.Close();
+                            if (File.Exists("../../Customers/" + phone + ".txt"))
+                            {
+                                MessageBox.Show("The phone number used is associated with another customer.");
+                            }
+
+                            else
+	                        {
+	                            FileStream createFile = File.Create("../../Customers/" + phone + ".txt");
+                                createFile.Close();
+                                StreamWriter outputFile;
+                                outputFile = File.AppendText("../../Customers/" + phone + ".txt");
+                                outputFile.WriteLine(first + " " + last);
+                                //outputFile.WriteLine(last);
+                                outputFile.WriteLine(phone);
+                                outputFile.WriteLine(email);
+                                outputFile.WriteLine(" ");
+                                outputFile.WriteLine("Drinks:");
+                                outputFile.WriteLine("-----------------------");
+                                outputFile.Close();
+                                StreamWriter addEmail;
+                                addEmail = File.AppendText("../../Mass_Email_List.txt");
+                                addEmail.WriteLine(email + ",");
+                                addEmail.Close();
+                                this.Close(); 
+	                        }
                         }
                         else
                         {
