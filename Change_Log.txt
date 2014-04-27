@@ -1,5 +1,12 @@
 ***CHANGE LOG***
 
+Version: 1.3.2 Building Robin
+04/27/2014 @ 00:40
+•created forms
+	-openATab.cs
+	-openTabs.cs
+	-closedTabs.cs
+
 Version: 1.3.1 Building Robin
 04/24/2014 @ 22:09
 	-addCustomer.cs-

@@ -30,7 +30,7 @@ namespace Customer_Tracker
             else
             {
                 StreamWriter outputFile;
-                outputFile = File.AppendText("../../Products.txt");
+                outputFile = File.AppendText(Form1.productFileLocation);
                 outputFile.WriteLine(product);
                 outputFile.Close();
                 userInputTxt.Text = "";

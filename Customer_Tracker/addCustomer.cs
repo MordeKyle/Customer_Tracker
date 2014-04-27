@@ -49,17 +49,17 @@ namespace Customer_Tracker
                     {
                         if (confirmInput(email, confirmEmail) == true)
                         {
-                            if (File.Exists("../../Customers/" + phone + ".txt"))
+                            if (File.Exists(Form1.customerFileLocation + phone + ".txt"))
                             {
                                 MessageBox.Show("The phone number used is associated with another customer.");
                             }
 
                             else
 	                        {
-	                            FileStream createFile = File.Create("../../Customers/" + phone + ".txt");
+	                            FileStream createFile = File.Create(Form1.customerFileLocation + phone + ".txt");
                                 createFile.Close();
                                 StreamWriter outputFile;
-                                outputFile = File.AppendText("../../Customers/" + phone + ".txt");
+                                outputFile = File.AppendText(Form1.customerFileLocation + phone + ".txt");
                                 outputFile.WriteLine(first + " " + last);
                                 //outputFile.WriteLine(last);
                                 outputFile.WriteLine(phone);
@@ -69,7 +69,7 @@ namespace Customer_Tracker
                                 outputFile.WriteLine("-----------------------");
                                 outputFile.Close();
                                 StreamWriter addEmail;
-                                addEmail = File.AppendText("../../Mass_Email_List.txt");
+                                addEmail = File.AppendText(Form1.emailFileLocation);
                                 addEmail.WriteLine(email + ",");
                                 addEmail.Close();
                                 this.Close(); 
